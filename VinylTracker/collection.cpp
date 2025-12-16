@@ -16,12 +16,11 @@ void Collection::addVinyl()
     double inputPrice;
     std::cout << "Enter in your Vinyl name:";
     std::getline(std::cin,vinylNameInput);
-    std::cin.ignore();
-    std::cout << "/nEnter in the Artist name:";
+    std::cout << "Enter in the Artist name:";
     std::getline(std::cin, artistInputName);
-    std::cin.ignore();
     std::cout << "Enter in the vinyl price:";
     std::cin >> inputPrice;
+    std::cin.ignore();
 
     Vinyl temp(vinylNameInput, artistInputName, inputPrice);
     inventory->push_back(temp);
@@ -32,14 +31,14 @@ void Collection::removeVinyl()
     std::string target;
     std::cout << "What is the name of the Vinyl you want to remove?:";
     std::getline(std::cin, target);
-    std::cin.ignore();
+
     std::cout << std::endl;
     for(int i = 0; i < inventory->size();i++)
     {
         if(inventory->at(i).getVinylName() == target)
         {
             inventory->erase(inventory->begin() + i);
-            std::cout << target << " successfully removed!/n";
+            std::cout << target << " successfully removed!\n";
             return;
         }
     }
@@ -47,9 +46,12 @@ void Collection::removeVinyl()
 
 void Collection::displayCollection()
 {
+    std::cout << "HERE ARE YOUR CURRENT VINYLS:\n";
     for(int i = 0; i < inventory->size();i++)
     {
-        std::cout << "Vinyl # " << i << ": " <<
-        inventory->at(i).getVinylName() << "/n";
+        std::cout << "Vinyl" << i << ": " <<
+            inventory->at(i).getVinylName() << "Artist:" <<
+            inventory->at(i).getArtistName() << " Price:" <<
+            inventory->at(i).getPrice() <<"\n";
     }
 }

@@ -11,7 +11,7 @@ public:
     Vinyl(std::string name, std::string artistName);
     Vinyl(std::string name, std::string artistName, double vinylPrice);
     std::string getVinylName();
-    std::string getAristName();
+    std::string getArtistName();
     double getPrice();
 private:
     std::string vinylName, artist;

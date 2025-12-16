@@ -24,7 +24,7 @@ std::string Vinyl::getVinylName()
     return vinylName;
 }
 
-std::string Vinyl::getAristName()
+std::string Vinyl::getArtistName()
 {
     return artist;
 }
