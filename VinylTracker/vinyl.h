@@ -2,16 +2,20 @@
 #define VINYL_H
 #include <string>
 #include <vector>
+#include <iostream>
 
 class Vinyl
 {
 public:
     Vinyl();
+    Vinyl(std::string name, std::string artistName);
+    Vinyl(std::string name, std::string artistName, double vinylPrice);
+    std::string getVinylName();
+    std::string getAristName();
+    double getPrice();
 private:
     std::string vinylName, artist;
     double price;
-    int month, day, year;
-
 };
 
 #endif // VINYL_H

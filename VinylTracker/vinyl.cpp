@@ -1,3 +1,38 @@
 #include "vinyl.h"
 
-Vinyl::Vinyl() {}
+Vinyl::Vinyl()
+{
+    vinylName = "ERROR";
+    artist = "ERROR";
+}
+
+Vinyl::Vinyl(std::string name, std::string artistName)
+{
+    vinylName = name;
+    artist = artistName;
+}
+
+Vinyl::Vinyl(std::string name, std::string artistName, double vinylPrice)
+{
+    vinylName = name;
+    artist = artistName;
+    price = vinylPrice;
+}
+
+std::string Vinyl::getVinylName()
+{
+    return vinylName;
+}
+
+std::string Vinyl::getAristName()
+{
+    return artist;
+}
+
+double Vinyl::getPrice()
+{
+    return price;
+}
+
+
+
