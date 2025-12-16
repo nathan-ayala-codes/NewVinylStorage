@@ -1,0 +1,7 @@
+/Users/nathanayala/Documents/CODING PROJECTS/VinylTracker/build/Qt_6_10_1_for_macOS-Debug/CMakeFiles/VinylTracker.dir
+/Users/nathanayala/Documents/CODING PROJECTS/VinylTracker/build/Qt_6_10_1_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/nathanayala/Documents/CODING PROJECTS/VinylTracker/build/Qt_6_10_1_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/nathanayala/Documents/CODING PROJECTS/VinylTracker/build/Qt_6_10_1_for_macOS-Debug/CMakeFiles/list_install_components.dir
+/Users/nathanayala/Documents/CODING PROJECTS/VinylTracker/build/Qt_6_10_1_for_macOS-Debug/CMakeFiles/install.dir
+/Users/nathanayala/Documents/CODING PROJECTS/VinylTracker/build/Qt_6_10_1_for_macOS-Debug/CMakeFiles/install/local.dir
+/Users/nathanayala/Documents/CODING PROJECTS/VinylTracker/build/Qt_6_10_1_for_macOS-Debug/CMakeFiles/install/strip.dir
