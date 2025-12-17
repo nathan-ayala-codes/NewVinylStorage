@@ -55,3 +55,11 @@ void Collection::displayCollection()
             inventory->at(i).getPrice() <<"\n";
     }
 }
+std::string Collection::getCollectionName()
+{
+    return collectionName;
+}
+int Collection::getNOE()
+{
+    return inventory->size();
+}

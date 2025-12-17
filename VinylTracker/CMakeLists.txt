@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(VinylTracker main.cpp
     vinyl.h vinyl.cpp
-    collection.h collection.cpp)
+    collection.h collection.cpp
+    interface.h interface.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS VinylTracker

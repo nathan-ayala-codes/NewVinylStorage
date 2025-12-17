@@ -10,6 +10,8 @@ public:
     void addVinyl();
     void removeVinyl();
     void displayCollection();
+    std::string getCollectionName();
+    int getNOE();
 
 
 private:
