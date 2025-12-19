@@ -16,10 +16,13 @@ void Interface::homePage()
 
         if (choice == 1)
         {
+            std::cin.ignore();
             viewCollections();
+
         }
         else if(choice == 2)
         {
+            std::cin.ignore();
             createCollection();
         }
         else if (choice == 0)
@@ -43,7 +46,7 @@ void Interface::createCollection()
         std::cerr << "ERROR: COLLECTION NOT MADE!\n";
         return;
     }
-    Collections->push_back(temp);
+    Collections.push_back(temp);
 
 }
 
@@ -53,24 +56,24 @@ void Interface::viewCollections()
     while(viewingCollections)
     {
     std::cout << "    YOUR COLLECTIONS    \n";
-    for(int i = 0; i < Collections->size();i++)
+    for(int i = 0; i < Collections.size();i++)
     {
-        std::cout << "Collection # " << i << ":" <<
-        Collections->at(i)->getCollectionName() <<
-        "#Vinyls Inside: " << Collections->at(i)->getNOE()
+        std::cout << "Collection # " << i + 1 << ":" <<
+        Collections.at(i)->getCollectionName() <<
+        "   #Vinyls Inside: " << Collections.at(i)->getNOE()
         << "\n";
     }
-    char choice;
+    int choice;
     std::cout << "Enter Vinyl# to edit or x to return:";
     std::cin >> choice;
     if(choice != 'x')
-        editCollection(Collections->at(choice));
+        editCollection(Collections.at(choice));
     else
         viewingCollections = false;
     }
 }
 
-void editCollection(Collection* other)
+void Interface::editCollection(Collection* other)
 {
     bool editing = true;
 
@@ -105,3 +108,5 @@ void editCollection(Collection* other)
         }
     }
 }
+
+

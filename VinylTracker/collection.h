@@ -15,7 +15,7 @@ public:
 
 
 private:
-    std::vector<Vinyl> inventory[50];
+    std::vector<Vinyl> inventory;
     std::string collectionName;
 };
 

@@ -23,7 +23,7 @@ void Collection::addVinyl()
     std::cin.ignore();
 
     Vinyl temp(vinylNameInput, artistInputName, inputPrice);
-    inventory->push_back(temp);
+    inventory.push_back(temp);
 }
 
 void Collection::removeVinyl()
@@ -33,11 +33,11 @@ void Collection::removeVinyl()
     std::getline(std::cin, target);
 
     std::cout << std::endl;
-    for(int i = 0; i < inventory->size();i++)
+    for(int i = 0; i < inventory.size();i++)
     {
-        if(inventory->at(i).getVinylName() == target)
+        if(inventory.at(i).getVinylName() == target)
         {
-            inventory->erase(inventory->begin() + i);
+            inventory.erase(inventory.begin() + i);
             std::cout << target << " successfully removed!\n";
             return;
         }
@@ -47,12 +47,12 @@ void Collection::removeVinyl()
 void Collection::displayCollection()
 {
     std::cout << "HERE ARE YOUR CURRENT VINYLS:\n";
-    for(int i = 0; i < inventory->size();i++)
+    for(int i = 0; i < inventory.size();i++)
     {
         std::cout << "Vinyl" << i << ": " <<
-            inventory->at(i).getVinylName() << "Artist:" <<
-            inventory->at(i).getArtistName() << " Price:" <<
-            inventory->at(i).getPrice() <<"\n";
+            inventory.at(i).getVinylName() << "Artist:" <<
+            inventory.at(i).getArtistName() << " Price:" <<
+            inventory.at(i).getPrice() <<"\n";
     }
 }
 std::string Collection::getCollectionName()
@@ -61,5 +61,5 @@ std::string Collection::getCollectionName()
 }
 int Collection::getNOE()
 {
-    return inventory->size();
+    return inventory.size();
 }
